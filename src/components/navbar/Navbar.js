@@ -5,17 +5,18 @@ import create from "../../assets/create.png";
 import notification from "../../assets/notification.png";
 import logo from "../../assets/logo.png";
 import hamburger from "../../assets/hamburger.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     // <!-- navigation -->
     <nav class="">
       <div class="  mx-auto px-5 lg:px-0 flex justify-between py-3">
-        <a href="/" className="flex items-center gap-4">
+        <Link to="/" className="flex items-center gap-4">
           <div>
             <img class=" w-5 h-5 " src={hamburger} alt="Learn with Sumit" />
           </div>
           <img class=" w-24" src={logo} alt="Learn with Sumit" />
-        </a>
+        </Link>
         <div className="flex gap-3">
           <form className="flex   rounded-full">
             <div class="border flex items-center bg-white  rounded-l-full  ">

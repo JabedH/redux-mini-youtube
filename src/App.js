@@ -7,18 +7,18 @@ import Video from "./components/Home/Video";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { store } from "./app/store";
 
 function App() {
+  console.log(store.Videos);
   return (
-    
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/videos/:videoId" element={<Video />} />
-        </Routes>
-      </Router>
-   
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/videos/:videoId" element={<Video />} />
+      </Routes>
+    </Router>
   );
 }
 
