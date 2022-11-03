@@ -8,11 +8,9 @@ import Tag from '../tags/Tag';
 const Home = () => {
     return (
         <div>
-            <Navbar/>
             <Tag/>
             <Grid/>
             <Pagination/>
-            <Footer/>
         </div>
     );
 };

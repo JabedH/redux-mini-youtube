@@ -3,12 +3,22 @@ import logo from "./logo.svg";
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Home from "./components/Home/Home";
+import Video from "./components/Home/Video";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App px-10">
-      <Home />
-    </div>
+    
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/videos/:videoId" element={<Video />} />
+        </Routes>
+      </Router>
+   
   );
 }
 

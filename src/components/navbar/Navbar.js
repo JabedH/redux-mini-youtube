@@ -20,7 +20,7 @@ const Navbar = () => {
           <form className="flex   rounded-full">
             <div class="border flex items-center bg-white  rounded-l-full  ">
               <input
-                class="outline-none border-none h-11 px-5 w-[500px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
+                class=" none  outline-none border-none h-11 px-5 w-[500px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
                 type="search"
                 name="search"
                 placeholder="Search"
@@ -34,15 +34,15 @@ const Navbar = () => {
               />
             </button>
           </form>
-          <div className=" hover:bg-gray-300 bg-gray-100  rounded-full flex">
+          <div className=" lg:flex sm:hidden  hover:bg-gray-300 bg-gray-100  rounded-full ">
             <button className=" px-[13px] ">
-              <img class="inline h-5 cursor-pointer " src={mic} alt="Search" />
+              <img class="inline w-5 cursor-pointer " src={mic} alt="Search" />
             </button>
           </div>
         </div>
-        <div className="flex gap-3">
-          <div className="  flex">
-            <button className=" px-[11px] hover:bg-gray-200   rounded-full ">
+        <div className="flex gap-3 ">
+          <div className="  flex ">
+            <button className=" lg:block sm:hidden px-[11px] hover:bg-gray-200   rounded-full ">
               <img
                 class="inline h-6  cursor-pointer"
                 src={create}
@@ -50,8 +50,8 @@ const Navbar = () => {
               />
             </button>
           </div>
-          <div className=" hover:bg-gray-200  rounded-full flex">
-            <button className=" px-[11px] ">
+          <div className="  hover:bg-gray-200  rounded-full flex">
+            <button className=" px-[11px] lg:block sm:hidden">
               <img
                 class="inline h-6 cursor-pointer "
                 src={notification}
