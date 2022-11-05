@@ -12,13 +12,15 @@ import { store } from "./app/store";
 function App() {
   console.log(store.Videos);
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/videos/:videoId" element={<Video />} />
-      </Routes>
-    </Router>
+    <div className="px-11">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/videos/:videoId" element={<Video />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
