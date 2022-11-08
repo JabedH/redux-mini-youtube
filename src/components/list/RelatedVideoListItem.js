@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const RelatedVideoListItem = ({video}) => {
 
 const {id, thumbnail, title,duration,author}= video || {}
-  console.log('this is related video', video)
+
   return (
     <div class="w-full flex flex-row gap-2 mb-4 ">
       <div class=" relative w-[168px] h-[94px] flex-none duration-300 hover:scale-[1.03]">

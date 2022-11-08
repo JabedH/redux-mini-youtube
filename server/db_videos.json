@@ -104,6 +104,36 @@
             "tags": ["tailwind", "css", "ui"],
             "likes": 0,
             "unlikes": 0
+        },
+        {
+            "id": 8,
+            "title": "Simple Frontend Pagination | React",
+            "description": "In this video we will implement some custom pagination in React to get a certain number of fetched posts per page. We will be using the useState and useEffect hooks as well.",
+            "author": "Traversy Media",
+            "avatar": "https://yt3.ggpht.com/ytc/AMLnZu-fB-c8gczS81r-VBWgzndcSZgd1zGA2QcYfACHMg=s88-c-k-c0x00ffffff-no-rj",
+            "date": "jan 15, 2021",
+            "duration": "10:12",
+            "views": "2.1k",
+            "link": "https://www.youtube-nocookie.com/embed/IYCa1F-OWmk",
+            "thumbnail": "https://webartdevelopers.com/blog/wp-content/uploads/2018/11/react-pagination-768x435.png",
+            "tags": ["tailwind", "css", "pagination"],
+            "likes": 0,
+            "unlikes": 0
+        },
+        {
+            "id": 9,
+            "title": "Learn JavaScript - Full Course for Beginners",
+            "description": "This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know to get started with the JavaScript programming language.",
+            "author": "freeCodeCamp.org",
+            "avatar": "https://yt3.ggpht.com/ytc/AMLnZu-fB-c8gczS81r-VBWgzndcSZgd1zGA2QcYfACHMg=s88-c-k-c0x00ffffff-no-rj",
+            "date": "feb 27, 2022",
+            "duration": "3:12:45",
+            "views": "2.1k",
+            "link": "https://www.youtube-nocookie.com/embed/PkZNo7MFNFg",
+            "thumbnail": "https://www.tutorialrepublic.com/lib/images/javascript-illustration.png",
+            "tags": ["html", "css", "javascript"],
+            "likes": 0,
+            "unlikes": 0
         }
     ],
     "tags": [

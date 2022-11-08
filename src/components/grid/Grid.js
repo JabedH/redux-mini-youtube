@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchVideos } from "../../features/videos/videosSlice";
 
 import Loading from "../Loading/Loading";
+import Pagination from "../pagination/Pagination";
 import VideoGrid from "./VideoGrid";
 
 const Grid = () => {
@@ -11,6 +12,16 @@ const Grid = () => {
   const { isLoading, isError, error, videos } = useSelector(
     (state) => state.videos
   );
+  const [currentPage, setCurrentPages]= useState(1)
+  const [postPerPage, setPostPerPage]= useState(8)
+  
+  // get current posts
+  const indexOfLastPost = currentPage * postPerPage
+  const indexOfFirstPost =indexOfLastPost - postPerPage
+  const currentVideos= videos.slice(indexOfFirstPost,indexOfLastPost)
+
+  const paginate = pageNumber => setCurrentPages(pageNumber)
+
   const { tags, search } = useSelector((state) => state.filter);
   useEffect(() => {
     dispatch(fetchVideos({ tags, search }));
@@ -23,8 +34,9 @@ const Grid = () => {
     content = <div class="col-span-12">No videos Found</div>;
   }
   if (!isError && !isLoading && videos.length > 0) {
-    content = videos.map((video) => <VideoGrid key={video.id} video={video} />);
+    content = currentVideos.map((video) => <VideoGrid key={video.id} video={video} />);
   }
+
   return (
     // <!-- Video Grid -->
     <section class="pt-12">
@@ -34,6 +46,7 @@ const Grid = () => {
           {content}
           {/* <div class="col-span-12">some error happened</div> */}
         </div>
+          <Pagination postPerPage={postPerPage} totalVideos={videos.length} paginate={paginate} />
       </section>
     </section>
   );
