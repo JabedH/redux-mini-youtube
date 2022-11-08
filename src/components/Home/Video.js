@@ -17,7 +17,6 @@ const Video = () => {
   useEffect(() => {
     dispatch(fetchVideo(videoId));
   }, [dispatch, videoId]);
-
   let content = null;
   if (isLoading) content = <Loading />;
   if (!isLoading && isError) content = <div class="col-span-12">{error}</div>;

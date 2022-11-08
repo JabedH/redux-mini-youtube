@@ -1,11 +1,12 @@
 import React from "react";
-import search from "../../assets/search.svg";
+
 import mic from "../../assets/mic.svg";
 import create from "../../assets/create.png";
 import notification from "../../assets/notification.png";
 import logo from "../../assets/logo.png";
 import hamburger from "../../assets/hamburger.png";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 const Navbar = () => {
   return (
     // <!-- navigation -->
@@ -18,23 +19,7 @@ const Navbar = () => {
           <img class=" w-24" src={logo} alt="Learn with Sumit" />
         </Link>
         <div className="flex gap-3">
-          <form className="flex   rounded-full">
-            <div class="border flex items-center bg-white  rounded-l-full  ">
-              <input
-                class=" none  outline-none border-none h-11 px-5 w-[500px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
-                type="search"
-                name="search"
-                placeholder="Search"
-              />
-            </div>
-            <button className="bg-gray-100  px-3 rounded-r-full">
-              <img
-                class="inline h-6 px-2 cursor-pointer "
-                src={search}
-                alt="Search"
-              />
-            </button>
-          </form>
+          <Search/>
           <div className=" lg:flex sm:hidden  hover:bg-gray-300 bg-gray-100  rounded-full ">
             <button className=" px-[13px] ">
               <img class="inline w-5 cursor-pointer " src={mic} alt="Search" />
