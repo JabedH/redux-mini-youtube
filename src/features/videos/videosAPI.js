@@ -18,7 +18,7 @@ export const getVideos = async (tags, search,authors) => {
       queryString += `&q=${search}`;
       console.log(queryString)
   }
-  if (authors !== "") {
+  if (authors.length > 0) {
       queryString += `&q=${authors}`;
       console.log(queryString)
   }

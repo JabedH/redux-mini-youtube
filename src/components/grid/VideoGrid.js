@@ -19,16 +19,16 @@ const VideoGrid = ({ video }) => {
   } = video;
 
   const dispatch = useDispatch()
-  // const {author: selectedAuthor} = useSelector(state => state.filter)
+  const {authors: selectedAuthor} = useSelector(state => state.filter)
 
-  // const isSelected = selectedAuthor.includes(author)? true: false
+  const isSelected = selectedAuthor.includes(author)? true: false
 const handleSelected =()=>{
-  dispatch(getAuthor(author))
-  // if(isSelected){
-  //   dispatch(authorRemoved(author))
-  // } else{
-  //   dispatch(authorSelected(author))
-  // }
+  // dispatch(getAuthor(author))
+  if(isSelected){
+    dispatch(authorRemoved(author))
+  } else{
+    dispatch(authorSelected(author))
+  }
 }
   return (
     <div class="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
