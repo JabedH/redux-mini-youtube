@@ -22,10 +22,10 @@ const Grid = () => {
 
   const paginate = pageNumber => setCurrentPages(pageNumber)
 
-  const { tags, search } = useSelector((state) => state.filter);
+  const { tags, search,authors } = useSelector((state) => state.filter);
   useEffect(() => {
-    dispatch(fetchVideos({ tags, search }));
-}, [dispatch, tags, search]);
+    dispatch(fetchVideos({ tags, search,authors }));
+}, [dispatch, tags, search,authors]);
 
   let content;
   if (isLoading) content = <Loading />;

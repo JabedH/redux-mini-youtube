@@ -1,5 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useMatch, useNavigate } from "react-router-dom";
+import { authorRemoved, authorSelected, getAuthor } from '../../features/filter/filterSlice';
+import { getVideo } from "../../features/video/VideoAPI";
 
 const VideoGrid = ({ video }) => {
   const {
@@ -14,6 +17,19 @@ const VideoGrid = ({ video }) => {
     link,
     thumbnail,
   } = video;
+
+  const dispatch = useDispatch()
+  // const {author: selectedAuthor} = useSelector(state => state.filter)
+
+  // const isSelected = selectedAuthor.includes(author)? true: false
+const handleSelected =()=>{
+  dispatch(getAuthor(author))
+  // if(isSelected){
+  //   dispatch(authorRemoved(author))
+  // } else{
+  //   dispatch(authorSelected(author))
+  // }
+}
   return (
     <div class="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
       <div class="w-full flex flex-col">
@@ -40,9 +56,17 @@ const VideoGrid = ({ video }) => {
             <Link to={`/videos/${id}`} href="video.html">
               <p class="text-slate-900 text-sm font-semibold">{title}</p>
             </Link>
-            <a class="text-gray-400 text-xs mt-2 hover:text-gray-600" href="#">
+            <div name={author}  onClick={handleSelected} class="cursor-pointer text-gray-400 text-xs mt-2 hover:text-gray-600" href="#">
               {author}
-            </a>
+            </div>
+            {/* <input
+                class=" none  outline-none border-none h-11 px-5 w-[500px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
+                type="search"
+                name="search"
+                value={input}
+                placeholder="Search"
+                onClick={author=>handleSearch(author) }
+              /> */}
             <p class="text-gray-400 text-xs mt-1">
               {views} views . {date}
             </p>
