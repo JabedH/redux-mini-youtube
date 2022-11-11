@@ -12,7 +12,7 @@ import { store } from "./app/store";
 function App() {
   console.log(store.Videos);
   return (
-    <div className="px-11">
+    <div className="lg:px-11">
       <Router>
         <Navbar />
         <Routes>

@@ -19,6 +19,7 @@ const style = isSelected? 'bg-blue-600 text-white px-4 py-1 rounded-full cursor-
   return (
     <div class={style} onClick={handleSelected}>
       {tag.title}
+      
     </div>
   );
 };

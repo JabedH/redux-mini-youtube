@@ -18,10 +18,14 @@ export const getVideos = async (tags, search,authors) => {
       queryString += `&q=${search}`;
       console.log(queryString)
   }
-  if (authors.length > 0) {
-      queryString += `&q=${authors}`;
-      console.log(queryString)
-  }
+  if (authors) {
+        queryString += `author_like=${authors}`;
+        console.log(queryString)
+    }
+  // if (authors.length > 0) {
+  //     queryString += `&q=${authors}`;
+  //     console.log(queryString)
+  // }
 console.log()
   const response = await axios.get(`/videos/?${queryString}`);
   console.log(response)

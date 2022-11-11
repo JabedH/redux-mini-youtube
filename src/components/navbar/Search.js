@@ -23,7 +23,7 @@ const Search = () => {
         <form onSubmit={handleSearch} className="flex  rounded-full">
             <div class="border flex items-center bg-white  rounded-l-full  ">
               <input
-                class=" none  outline-none border-none h-11 px-5 w-[500px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
+                class=" none  outline-none border-none lg:h-11 h-7 px-5 lg:w-[500px] w-[150px] rounded-l-full focus:ring-1 focus:ring-black-500 text-base"
                 type="search"
                 name="search"
                 value={input}
@@ -33,7 +33,7 @@ const Search = () => {
             </div>
             <button type='submit' className="bg-gray-100  px-3 rounded-r-full">
               <img
-                class="inline h-6 px-2 cursor-pointer "
+                class="inline h-6 lg:px-2 cursor-pointer "
                 src={searchIcon}
                 alt="Search"
               />

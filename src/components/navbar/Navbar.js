@@ -12,21 +12,28 @@ const Navbar = () => {
     // <!-- navigation -->
     <nav class="">
       <div class="  mx-auto px-5 lg:px-0 flex justify-between py-3">
-        <Link to="/" className="flex items-center gap-4">
+        <Link to="/" className="flex items-center lg:gap-4 gap-2">
           <div>
-            <img class=" w-5 h-5 " src={hamburger} alt="Learn with Sumit" />
+            <img class=" lg:w-5 lg:h-5 w-4 h-4 " src={hamburger} alt="Learn with Sumit" />
           </div>
-          <img class=" w-24" src={logo} alt="Learn with Sumit" />
+          <img class=" lg:w-24 w-16" src={logo} alt="Learn with Sumit" />
         </Link>
         <div className="flex gap-3">
-          <Search/>
-          <div className=" lg:flex sm:hidden  hover:bg-gray-300 bg-gray-100  rounded-full ">
+          <Search />
+          <div className="lg:hidden flex">
+            <div className="avatar ">
+              <div className="w-8 h-8 rounded-full">
+                <img src="https://placeimg.com/192/192/people" />
+              </div>
+            </div>
+          </div>
+          <div className=" hidden lg:flex  hover:bg-gray-300 bg-gray-100  rounded-full ">
             <button className=" px-[13px] ">
               <img class="inline w-5 cursor-pointer " src={mic} alt="Search" />
             </button>
           </div>
         </div>
-        <div className="flex gap-3 ">
+        <div className="hidden lg:flex gap-3 ">
           <div className="  flex ">
             <button className=" lg:block sm:hidden px-[11px] hover:bg-gray-200   rounded-full ">
               <img
